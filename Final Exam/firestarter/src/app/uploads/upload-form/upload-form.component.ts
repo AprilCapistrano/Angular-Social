@@ -25,6 +25,7 @@ export class UploadFormComponent {
     if (file && file.length === 1) {
       this.currentUpload = new Upload(file.item(0));
       this.upSvc.pushUpload(this.currentUpload);
+      
     } else {
       console.error('No file found!');
     }
