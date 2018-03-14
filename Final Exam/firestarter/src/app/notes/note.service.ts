@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 interface NewNote {
   content: string;
   hearts: 0;
-  time: number;
+  time: Date;
 }
 
 @Injectable()
@@ -45,7 +45,7 @@ export class NoteService {
     const note = {
       content,
       hearts: 0,
-      time: new Date().getTime(),
+      time: new Date(),
     };
     return this.notesCollection.add(note);
   }

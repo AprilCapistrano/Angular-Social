@@ -1,5 +1,7 @@
 <div>
   <h3>{{ note.content }}</h3>
+  <p>{{note.time | date:'MMM-d-yyyy'}}</p>
+
   <span class="button is-small is-info" (click)='addHeartToNote(note.hearts)'>
     Like <i class="fa fa-thumbs-up"></i>
   </span>
